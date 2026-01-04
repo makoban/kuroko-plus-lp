@@ -79,7 +79,7 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <Badge className="mb-4 bg-chart-2 text-foreground border-2 border-foreground px-4 py-1 text-sm font-bold">機能紹介</Badge>
             <h2 className="text-3xl md:text-5xl font-bold font-rounded mb-6 text-foreground">
-              クロコくんの<span className="text-chart-1">7つ道具</span>
+              クロコくんの<span className="text-chart-1">ひみつ道具</span>
             </h2>
             <p className="text-muted-foreground text-lg font-medium">
               あなたの会話を影から支える、便利な機能がいっぱい！
@@ -115,17 +115,17 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Feature 3: Search */}
+            {/* Feature 3: Level Adaptation */}
             <div className="pop-card p-6 bg-chart-2/10 group">
               <div className="h-48 mb-6 flex items-center justify-center overflow-hidden rounded-xl border-2 border-foreground bg-white">
-                <img src="/images/feat_search.png" alt="Search" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <img src="/images/feat_search.png" alt="Level Adaptation" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               </div>
               <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                <Search className="w-6 h-6 text-chart-2" />
-                情報収集の術
+                <Users className="w-6 h-6 text-chart-2" />
+                知識レベル適応の術
               </h3>
               <p className="text-sm font-medium leading-relaxed">
-                ネットの海から関連情報を釣り上げます。話題が尽きても大丈夫！
+                小学生から専門家まで。あなたのレベルに合わせて、解説の難易度を調整します。
               </p>
             </div>
           </div>
@@ -134,38 +134,38 @@ export default function Home() {
           <div className="mt-12 grid md:grid-cols-2 gap-6">
             <div className="pop-card p-4 flex items-center gap-4 bg-white">
               <div className="w-12 h-12 rounded-full bg-chart-4/20 border-2 border-foreground flex items-center justify-center shrink-0">
-                <Sparkles className="w-6 h-6 text-chart-4" />
+                <Mic className="w-6 h-6 text-chart-4" />
               </div>
               <div>
-                <h4 className="font-bold text-lg">ベスト質問＆回答提示</h4>
-                <p className="text-xs text-muted-foreground">「次なんて言えばいい？」をサポート</p>
+                <h4 className="font-bold text-lg">高精度音声認識</h4>
+                <p className="text-xs text-muted-foreground">AssemblyAI / Whisper対応で聞き逃しなし</p>
               </div>
             </div>
             <div className="pop-card p-4 flex items-center gap-4 bg-white">
               <div className="w-12 h-12 rounded-full bg-chart-1/20 border-2 border-foreground flex items-center justify-center shrink-0">
-                <Mic className="w-6 h-6 text-chart-1" />
+                <Sparkles className="w-6 h-6 text-chart-1" />
               </div>
               <div>
-                <h4 className="font-bold text-lg">声色分析＆人物識別</h4>
-                <p className="text-xs text-muted-foreground">声から感情や人を特定します</p>
+                <h4 className="font-bold text-lg">誤認識自動修正</h4>
+                <p className="text-xs text-muted-foreground">文脈を読んで、間違いをこっそり直します</p>
               </div>
             </div>
             <div className="pop-card p-4 flex items-center gap-4 bg-white">
               <div className="w-12 h-12 rounded-full bg-chart-5/20 border-2 border-foreground flex items-center justify-center shrink-0">
-                <Shield className="w-6 h-6 text-chart-5" />
+                <Search className="w-6 h-6 text-chart-5" />
               </div>
               <div>
-                <h4 className="font-bold text-lg">矛盾検知＆公平記録</h4>
-                <p className="text-xs text-muted-foreground">「言った言わない」を防ぎます</p>
+                <h4 className="font-bold text-lg">ジャンル自動推定</h4>
+                <p className="text-xs text-muted-foreground">会話のテーマを察知して、精度アップ！</p>
               </div>
             </div>
             <div className="pop-card p-4 flex items-center gap-4 bg-white">
               <div className="w-12 h-12 rounded-full bg-chart-3/20 border-2 border-foreground flex items-center justify-center shrink-0">
-                <Users className="w-6 h-6 text-chart-3" />
+                <FileText className="w-6 h-6 text-chart-3" />
               </div>
               <div>
-                <h4 className="font-bold text-lg">マルチモーダル対応</h4>
-                <p className="text-xs text-muted-foreground">画像や映像も理解します（予定）</p>
+                <h4 className="font-bold text-lg">Excel出力</h4>
+                <p className="text-xs text-muted-foreground">調べた単語をリスト化して持ち帰れます</p>
               </div>
             </div>
           </div>

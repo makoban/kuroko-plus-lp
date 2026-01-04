@@ -32,117 +32,69 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: "Inter", "Noto Sans JP", sans-serif;
 }
 
 :root {
-  /* Japanese Modern Pop Palette */
-  --primary: oklch(0.35 0 0); /* Sumi (Ink Black) - Main Text & Character */
-  --primary-foreground: oklch(1 0 0); /* White */
+  /* Modern Clean Palette */
+  --primary: oklch(0.55 0.2 260); /* Vivid Blue */
+  --primary-foreground: oklch(1 0 0);
   
-  --sidebar-primary: oklch(0.35 0 0);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  
-  --chart-1: oklch(0.85 0.1 350); /* Sakura (Pink) */
-  --chart-2: oklch(0.65 0.15 200); /* Asagi (Teal) */
-  --chart-3: oklch(0.85 0.18 85); /* Yamabuki (Golden Yellow) */
-  --chart-4: oklch(0.6 0.2 280); /* Fuji (Wisteria Purple) */
-  --chart-5: oklch(0.7 0.15 140); /* Moegi (Sprout Green) */
-  
-  --radius: 1.5rem; /* More rounded for cuteness */
-  
-  --background: oklch(0.98 0.01 100); /* Kinari (Unbleached White) */
-  --foreground: oklch(0.35 0 0); /* Sumi */
+  --background: oklch(0.99 0 0); /* Pure White */
+  --foreground: oklch(0.2 0.02 260); /* Slate 900 */
   
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.35 0 0);
+  --card-foreground: oklch(0.2 0.02 260);
   
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.35 0 0);
+  --popover-foreground: oklch(0.2 0.02 260);
   
-  --secondary: oklch(0.95 0.05 350); /* Light Sakura */
-  --secondary-foreground: oklch(0.4 0.1 350);
+  --secondary: oklch(0.96 0.01 260); /* Soft Blue Gray */
+  --secondary-foreground: oklch(0.2 0.02 260);
   
-  --muted: oklch(0.96 0.01 200); /* Light Asagi tint */
-  --muted-foreground: oklch(0.5 0.05 200);
+  --muted: oklch(0.96 0.01 260);
+  --muted-foreground: oklch(0.5 0.02 260); /* Slate 500 */
   
-  --accent: oklch(0.95 0.1 85); /* Light Yamabuki */
-  --accent-foreground: oklch(0.4 0.1 50);
+  --accent: oklch(0.94 0.02 260);
+  --accent-foreground: oklch(0.2 0.02 260);
   
-  --destructive: oklch(0.65 0.2 20);
-  --destructive-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.6 0.2 20);
+  --destructive-foreground: oklch(1 0 0);
   
-  --border: oklch(0.9 0.02 200);
-  --input: oklch(0.9 0.02 200);
-  --ring: oklch(0.65 0.15 200);
+  --border: oklch(0.92 0.01 260);
+  --input: oklch(0.92 0.01 260);
+  --ring: oklch(0.55 0.2 260);
   
-  --sidebar: oklch(0.98 0.01 100);
-  --sidebar-foreground: oklch(0.35 0 0);
-  --sidebar-accent: oklch(0.95 0.05 350);
-  --sidebar-accent-foreground: oklch(0.4 0.1 350);
-  --sidebar-border: oklch(0.9 0.02 200);
-  --sidebar-ring: oklch(0.65 0.15 200);
-
-  /* Pop Shadows */
-  --shadow-pop: 4px 4px 0px oklch(0.35 0 0);
-  --shadow-pop-sm: 2px 2px 0px oklch(0.35 0 0);
-  --shadow-pop-hover: 6px 6px 0px oklch(0.35 0 0);
+  /* Chart Colors for Accents */
+  --chart-1: oklch(0.6 0.15 250); /* Blue */
+  --chart-2: oklch(0.65 0.18 300); /* Purple */
+  --chart-3: oklch(0.7 0.15 30);  /* Orange */
+  --chart-4: oklch(0.7 0.15 150); /* Green */
+  --chart-5: oklch(0.6 0.15 200); /* Cyan */
+  
+  --radius: 1rem;
 }
 
 .dark {
-  /* Dark Neumorphism Palette */
-  --primary: oklch(0.3 0.1 240);
-  --primary-foreground: oklch(0.9 0.05 240);
-  --sidebar-primary: oklch(0.3 0.1 240);
-  --sidebar-primary-foreground: oklch(0.9 0.05 240);
-  
-  --background: oklch(0.2 0.02 240);
-  --foreground: oklch(0.9 0.01 240);
-  
-  --card: oklch(0.2 0.02 240);
-  --card-foreground: oklch(0.9 0.01 240);
-  
-  --popover: oklch(0.2 0.02 240);
-  --popover-foreground: oklch(0.9 0.01 240);
-  
-  --secondary: oklch(0.25 0.05 240);
-  --secondary-foreground: oklch(0.9 0.01 240);
-  
-  --muted: oklch(0.25 0.02 240);
-  --muted-foreground: oklch(0.7 0.02 240);
-  
-  --accent: oklch(0.25 0.05 240);
-  --accent-foreground: oklch(0.9 0.01 240);
-  
-  --destructive: oklch(0.6 0.2 20);
-  --destructive-foreground: oklch(0.98 0 0);
-  
-  --border: oklch(0.25 0.02 240);
-  --input: oklch(0.25 0.02 240);
-  --ring: oklch(0.4 0.1 240);
-  
-  --chart-1: oklch(0.4 0.1 240);
-  --chart-2: oklch(0.5 0.15 240);
-  --chart-3: oklch(0.6 0.2 240);
-  --chart-4: oklch(0.7 0.25 240);
-  --chart-5: oklch(0.8 0.3 240);
-  
-  --sidebar: oklch(0.2 0.02 240);
-  --sidebar-foreground: oklch(0.9 0.01 240);
-  --sidebar-accent: oklch(0.25 0.05 240);
-  --sidebar-accent-foreground: oklch(0.9 0.01 240);
-  --sidebar-border: oklch(0.25 0.02 240);
-  --sidebar-ring: oklch(0.4 0.1 240);
-
-  --shadow-neumorph: 8px 8px 16px oklch(0.15 0.02 240), -8px -8px 16px oklch(0.25 0.02 240);
-  --shadow-neumorph-inset: inset 4px 4px 8px oklch(0.15 0.02 240), inset -4px -4px 8px oklch(0.25 0.02 240);
+  --background: oklch(0.1 0.02 260);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.15 0.02 260);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.15 0.02 260);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.6 0.2 260);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.2 0.02 260);
+  --secondary-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.2 0.02 260);
+  --muted-foreground: oklch(0.6 0.02 260);
+  --accent: oklch(0.2 0.02 260);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.5 0.2 20);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.2 0.02 260);
+  --input: oklch(0.2 0.02 260);
+  --ring: oklch(0.5 0.2 260);
 }
 
 @layer base {
@@ -150,18 +102,10 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
   }
-  button:not(:disabled),
-  [role="button"]:not([aria-disabled="true"]),
-  [type="button"]:not(:disabled),
-  [type="submit"]:not(:disabled),
-  [type="reset"]:not(:disabled),
-  a[href],
-  select:not(:disabled),
-  input[type="checkbox"]:not(:disabled),
-  input[type="radio"]:not(:disabled) {
-    @apply cursor-pointer;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans tracking-tight;
   }
 }
 
@@ -172,11 +116,6 @@
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .flex {
-    min-height: 0;
-    min-width: 0;
   }
 
   @media (min-width: 640px) {
@@ -193,59 +132,49 @@
       max-width: 1280px;
     }
   }
-
-  /* Pop & Manga Style Utilities */
-  .pop-card {
-    background: var(--card);
-    border: 2px solid var(--foreground);
-    box-shadow: var(--shadow-pop);
-    border-radius: var(--radius);
-    transition: all 0.2s ease;
+  
+  /* Modern Glassmorphism */
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-lg;
   }
   
-  .pop-card:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: var(--shadow-pop-hover);
-  }
-
-  .manga-bg {
-    background-image: radial-gradient(var(--muted) 20%, transparent 20%), radial-gradient(var(--muted) 20%, transparent 20%);
-    background-color: var(--background);
-    background-position: 0 0, 10px 10px;
-    background-size: 20px 20px;
+  .dark .glass-panel {
+    @apply bg-black/40 backdrop-blur-xl border border-white/10 shadow-lg;
   }
   
-  .speech-bubble {
-    position: relative;
-    background: #fff;
-    border: 2px solid var(--foreground);
-    border-radius: 1rem;
-    padding: 1rem;
-    box-shadow: var(--shadow-pop-sm);
+  /* Bento Grid Card */
+  .bento-card {
+    @apply bg-card rounded-3xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden;
   }
   
-  .speech-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 20px;
-    border-width: 10px 10px 0;
-    border-style: solid;
-    border-color: var(--foreground) transparent;
-    display: block;
-    width: 0;
+  /* Aurora Background */
+  .aurora-bg {
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
   }
   
-  .speech-bubble::before {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 22px;
-    border-width: 8px 8px 0;
-    border-style: solid;
-    border-color: #fff transparent;
-    display: block;
-    width: 0;
-    z-index: 1;
+  .aurora-blob {
+    @apply absolute rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob;
+  }
+  
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
   }
 }

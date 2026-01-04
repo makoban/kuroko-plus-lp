@@ -38,15 +38,14 @@ export default function Home() {
               AI Conversation Assistant
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]">
-              会話の裏方、<br />
+              もう、<br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-pink-400 to-yellow-400">
-                デジタル黒子
+                検索しなくていい。
               </span>
-              が<br />支えます。
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-              リアルタイム音声認識とAI解説で、あなたのコミュニケーションをステルスサポート。
-              専門用語も、話題のネタも、もう困りません。
+              AIが勝手に調べて、そっと教えてくれる。<br />
+              あなたはただ、会話を楽しむだけ。
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <Button size="lg" className="rounded-full h-12 px-8 text-base shadow-xl shadow-pink-500/20 hover:shadow-pink-500/30 transition-all">
@@ -73,16 +72,16 @@ export default function Home() {
           <div className="relative animate-in slide-in-from-right-10 duration-1000 fade-in delay-200">
             <div className="relative z-10">
               {/* Main Character Visual */}
-              <div className="relative w-full aspect-square max-w-md mx-auto">
+              <div className="relative w-full aspect-[9/16] max-w-sm mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-chart-2/20 rounded-full blur-3xl animate-pulse"></div>
                 <img 
-                  src="/images/char_hero.png" 
-                  alt="Kuroko-kun" 
+                  src="/images/mockup_mobile_final.png" 
+                  alt="App Mockup" 
                   className="relative z-10 w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700"
                 />
                 
                 {/* Floating UI Cards */}
-                <div className="absolute top-10 -right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50 animate-bounce duration-[3000ms]">
+                <div className="absolute top-20 -right-12 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50 animate-bounce duration-[3000ms] hidden md:block">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
                       <Zap className="w-5 h-5" />
@@ -94,7 +93,7 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="absolute bottom-10 -left-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50 animate-bounce duration-[4000ms]">
+                <div className="absolute bottom-32 -left-12 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50 animate-bounce duration-[4000ms] hidden md:block">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center text-pink-600">
                       <Brain className="w-5 h-5" />
@@ -117,12 +116,13 @@ export default function Home() {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-400">
-                ひみつ道具
+                全自動
               </span>
-              で、会話をアップデート。
+              だから、見るだけ。
             </h2>
             <p className="text-muted-foreground text-lg">
-              最新のAI技術を、使いやすい形に。あなたの会話を影から支える多彩な機能。
+              難しい操作は一切不要。AIがあなたの代わりに調査して、<br className="hidden md:block" />
+              必要な情報をそっと差し出します。
             </p>
           </div>
 
@@ -133,10 +133,11 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center">
                   <FileText className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold">都度要約の術</h3>
+                <h3 className="text-2xl font-bold">勝手に調べる</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  長時間の会議や会話も、AIがリアルタイムで要点を抽出。
-                  「結局何が決まったの？」という状況をゼロにします。
+                  会話中の「これ何だっけ？」をAIが自動検知。<br />
+                  あなたがスマホを操作する必要はありません。<br />
+                  AIが勝手に検索して、答えを用意してくれます。
                 </p>
               </div>
               <div className="flex-1 w-full h-48 rounded-2xl overflow-hidden shadow-lg border border-border/50 relative group-hover:scale-[1.02] transition-transform duration-500">
@@ -150,9 +151,11 @@ export default function Home() {
                 <MessageSquare className="w-6 h-6" />
               </div>
               <div className="space-y-2">
-                <h3 className="text-2xl font-bold">瞬間解説の術</h3>
+                <h3 className="text-2xl font-bold">そっと教える</h3>
                 <p className="text-muted-foreground">
-                  知らない単語が出ても大丈夫。文脈に合わせてこっそり意味を教えてくれます。
+                  難しい専門用語も、知らない流行語も。<br />
+                  会話の邪魔をしないように、<br />
+                  そっとカードで教えてくれます。
                 </p>
               </div>
               <div className="flex-1 w-full rounded-2xl overflow-hidden shadow-lg border border-border/50 relative mt-auto group-hover:scale-[1.02] transition-transform duration-500">

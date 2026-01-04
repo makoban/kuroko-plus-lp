@@ -117,7 +117,7 @@ export default function Home() {
             <div className="order-2 md:order-1 relative">
               <div className="absolute inset-0 bg-yellow-100 rounded-full blur-3xl opacity-50 transform -translate-x-10"></div>
               <img 
-                src="/images/mockup_explanation.png" 
+                src="/images/feat_explain.png" 
                 alt="Explanation Feature" 
                 className="relative z-10 w-full max-w-sm mx-auto drop-shadow-2xl transform hover:-rotate-2 transition-transform duration-500"
               />
@@ -151,7 +151,7 @@ export default function Home() {
             <div className="order-2 md:order-2 relative">
               <div className="absolute inset-0 bg-pink-100 rounded-full blur-3xl opacity-50 transform translate-x-10"></div>
               <img 
-                src="/images/mockup_summary.png" 
+                src="/images/feat_summary.png" 
                 alt="Summary Feature" 
                 className="relative z-10 w-full max-w-sm mx-auto drop-shadow-2xl transform hover:rotate-2 transition-transform duration-500"
               />
@@ -163,7 +163,7 @@ export default function Home() {
             <div className="order-2 md:order-1 relative">
               <div className="absolute inset-0 bg-blue-100 rounded-full blur-3xl opacity-50 transform -translate-x-10"></div>
               <img 
-                src="/images/mockup_settings.png" 
+                src="/images/feat_search.png" 
                 alt="Settings Feature" 
                 className="relative z-10 w-full max-w-sm mx-auto drop-shadow-2xl transform hover:-rotate-2 transition-transform duration-500"
               />

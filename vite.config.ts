@@ -8,7 +8,11 @@ import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
 
+// GitHub Pages deployment base path
+const base = process.env.GITHUB_PAGES === 'true' ? '/kuroko-plus-lp/' : '/';
+
 export default defineConfig({
+  base,
   plugins,
   resolve: {
     alias: {

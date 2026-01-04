@@ -85,7 +85,7 @@ export default function Home() {
                 {/* Main Mockup */}
                 <div className="relative z-10 w-full max-w-xs aspect-[9/19]">
                   <img 
-                    src="/images/mockup_mobile_final.png" 
+                    src="/images/mockup_full_pink.png" 
                     alt="App Mockup" 
                     className="w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700"
                   />

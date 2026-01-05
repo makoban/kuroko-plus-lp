@@ -100,13 +100,13 @@ export default function Home() {
                     <div className="flex-1 p-4 overflow-hidden flex flex-col">
                       <ChatMessage 
                         isUser 
-                        text="次週のプレゼンに向けて、合意形成を図りたいです。" 
+                        text="来週のコンセンサスについて相談したいです。" 
                         delay={0.5} 
                       />
                       <ChatMessage 
                         text={
                           <span>
-                            <span className="font-bold text-pink-500">コンセンサス（合意形成）</span><br/>
+                            <span className="font-bold text-pink-500">コンセンサス</span><br/>
                             「合意」や「意見の一致」という意味です。<br/>
                             会議のゴール設定によく使われます。
                           </span>

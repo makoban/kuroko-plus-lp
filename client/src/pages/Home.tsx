@@ -1,295 +1,289 @@
 import { Button } from "@/components/ui/button";
-import { PhoneMockup, ChatMessage } from "@/components/PhoneMockup";
-import { motion } from "framer-motion";
-import { Mic, Search, FileText, Settings, Zap, Brain, Lock, ArrowRight, Play, CheckCircle2, Sparkles, Users, Download, Globe, Volume2, Radio } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Check, Mic, Volume2, Settings, Shield, Smartphone, ExternalLink, MessageCircle } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background font-sans text-foreground overflow-x-hidden selection:bg-pink-500/20">
-      {/* Background Gradients */}
-      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-pink-100 rounded-full blur-3xl mix-blend-multiply animate-blob"></div>
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-chart-2/10 rounded-full blur-3xl mix-blend-multiply animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-chart-3/10 rounded-full blur-3xl mix-blend-multiply animate-blob animation-delay-4000"></div>
-      </div>
-
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 glass-panel border-b-0 rounded-none">
-        <div className="container mx-auto flex justify-between items-center py-4 px-4">
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+      {/* Header */}
+      <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-400">KUROKO PLUS</span>
+            <img src="/logo.png" alt="KUROKO PLUS Logo" className="h-10 w-10 object-contain" />
+            <span className="text-xl font-bold tracking-tight text-slate-900">KUROKO PLUS</span>
           </div>
-          <div className="hidden md:flex gap-8 text-sm font-medium text-muted-foreground">
-            <a href="#features" className="hover:text-pink-600 transition-colors">機能</a>
-            <a href="#scenes" className="hover:text-pink-600 transition-colors">利用シーン</a>
-            <a href="#future" className="hover:text-pink-600 transition-colors">将来展望</a>
-          </div>
-          <Button className="rounded-full shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40 transition-all">
-            アプリを試す
+          <Button variant="default" size="sm" className="bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full" asChild>
+            <a href="https://kuroko-plus.becreative.co.jp/" target="_blank" rel="noopener noreferrer">
+              無料で試す
+            </a>
           </Button>
         </div>
-      </nav>
+      </header>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div className="container px-4 mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-            <div className="w-full lg:w-1/2 text-center lg:text-left z-10">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-50 text-pink-600 text-sm font-medium mb-8 animate-fade-in-up">
-                <Zap className="w-4 h-4" />
-                <span>AI Conversation Assistant</span>
-              </div>
-              
-              <h1 className="text-5xl lg:text-7xl font-bold tracking-tight mb-8 leading-tight">
-                もう、<br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-400">検索しなくて</span><br/>
-                いい。
-              </h1>
-              
-              <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                会話中の「これ何だっけ？」をAIが全自動で解決。<br/>
-                あなたはただ、目の前の会話を楽しむだけ。<br/>
-                黒子がそっと、知識をサポートします。
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 text-lg shadow-lg shadow-blue-200">
-                  <Mic className="w-5 h-5 mr-2" />
-                  無料で始める
-                </Button>
-                <Button size="lg" variant="outline" className="rounded-full px-8 h-14 text-lg border-2">
-                  <Play className="w-5 h-5 mr-2" />
-                  デモを見る
-                </Button>
-              </div>
-
-              <div className="mt-12 flex items-center justify-center lg:justify-start gap-8 text-gray-400 text-sm font-medium">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-500" />
-                  <span>登録不要</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-500" />
-                  <span>完全無料</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-500" />
-                  <span>1,000+ ユーザー</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full lg:w-1/2 relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-pink-200 to-blue-200 rounded-full blur-3xl opacity-30 transform scale-110"></div>
-              
-              {/* Interactive Phone Mockup */}
-              <div className="relative z-10 transform lg:rotate-[-5deg] transition-transform hover:rotate-0 duration-500">
-                <PhoneMockup>
-                  <div className="h-full bg-slate-50 flex flex-col">
-                    {/* App Header */}
-                    <div className="bg-white p-4 pt-12 shadow-sm z-10 flex items-center justify-between">
-                      <div className="font-bold text-gray-800">KUROKO PLUS</div>
-                      <div className="flex gap-2">
-                        <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                        <div className="text-xs text-gray-500">Listening...</div>
-                      </div>
-                    </div>
-                    
-                    {/* Chat Area */}
-                    <div className="flex-1 p-4 overflow-hidden flex flex-col">
-                      <ChatMessage 
-                        isUser 
-                        text="来週のコンセンサスについて相談したいです。" 
-                        delay={0.5} 
-                      />
-                      <ChatMessage 
-                        text={
-                          <span>
-                            <span className="font-bold text-pink-500">コンセンサス</span><br/>
-                            「合意」や「意見の一致」という意味です。<br/>
-                            会議のゴール設定によく使われます。
-                          </span>
-                        }
-                        type="card"
-                        delay={1.5}
-                      />
-                      <ChatMessage 
-                        isUser 
-                        text="なるほど、アジェンダに入れておきます。" 
-                        delay={3.0} 
-                      />
-                      <ChatMessage 
-                        text={
-                          <span>
-                            <span className="font-bold text-pink-500">アジェンダ</span>：<br/>
-                            会議の「議題」や「予定表」のことです。
-                          </span>
-                        }
-                        type="card"
-                        delay={4.0}
-                      />
-                    </div>
-
-                    {/* Floating Action Button */}
-                    <div className="absolute bottom-6 right-6">
-                      <div className="w-14 h-14 bg-pink-500 rounded-full shadow-lg flex items-center justify-center text-white animate-pulse">
-                        <Mic className="w-6 h-6" />
-                      </div>
-                    </div>
-                  </div>
-                </PhoneMockup>
-
-                {/* Character Image */}
-                <img 
-                  src="/images/char_hero.png" 
-                  alt="Kuroko Character" 
-                  className="absolute -bottom-10 -right-10 w-48 drop-shadow-xl animate-bounce-slow hidden lg:block"
-                />
-              </div>
-            </div>
-          </div>
+      <section className="relative overflow-hidden bg-slate-900 text-white">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/hero_table_smartphone.png" 
+            alt="Meeting room table with smartphone" 
+            className="h-full w-full object-cover opacity-40 hidden md:block"
+          />
+          <img 
+            src="/images/hero_table_smartphone_mobile.png" 
+            alt="Meeting room table with smartphone" 
+            className="h-full w-full object-cover opacity-40 md:hidden"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-24 bg-white/50 relative overflow-hidden">
-        <div className="container px-4 mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-400">
-                会話を邪魔しない
-              </span>
-              <br />
-              自然なサポート
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              最新のAI技術が、あなたの会話をリアルタイムで理解し、<br className="hidden md:block" />
-              必要な情報だけをタイミングよく提供します。
+        <div className="container relative z-10 mx-auto px-4 py-20 md:py-32 text-center md:text-left">
+          <div className="max-w-2xl">
+            <Badge className="mb-4 bg-orange-500 hover:bg-orange-600 text-white border-none px-3 py-1 text-sm">
+              New Release
+            </Badge>
+            <h1 className="mb-6 text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight md:text-6xl lg:text-7xl whitespace-pre-line">
+              スマホが会話をキャッチ。<br />
+              調べてそっと教えてくれる。
+            </h1>
+            <p className="mb-8 text-lg font-medium text-slate-200 md:text-xl lg:text-2xl">
+              操作不要なのに会話に困らない！<br />
+              あなたの専属「黒子」が、<br className="md:hidden" />リアルタイムでサポートします。
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-3xl shadow-xl shadow-pink-100/50 border border-pink-50 hover:border-pink-200 transition-all group">
-              <div className="w-14 h-14 bg-pink-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Volume2 className="w-7 h-7 text-pink-500" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">高精度な聞き取り</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                自動で音量を増幅し、人の声の周波数だけをクリアに取得。
-                騒がしい環境でも、大切な会話を聞き逃しません。
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-3xl shadow-xl shadow-blue-100/50 border border-blue-50 hover:border-blue-200 transition-all group">
-              <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Brain className="w-7 h-7 text-blue-500" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">文脈理解AI</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                単なる文字起こしではなく、会話の流れを理解。
-                「その場の文脈」に合わせた最適な補足情報を提示します。
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-3xl shadow-xl shadow-yellow-100/50 border border-yellow-50 hover:border-yellow-200 transition-all group">
-              <div className="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Sparkles className="w-7 h-7 text-yellow-500" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">知識レベル自動調整</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                あなたの知識レベルに合わせて、解説の詳しさを自動調整。
-                知っていることは省略し、知らないことだけを教えます。
-              </p>
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start">
+              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg shadow-orange-500/20 w-full sm:w-auto" asChild>
+                <a href="https://kuroko-plus.becreative.co.jp/" target="_blank" rel="noopener noreferrer">
+                  無料で試してみる
+                  <ExternalLink className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/20 font-bold text-lg px-8 py-6 rounded-full backdrop-blur-sm w-full sm:w-auto" asChild>
+                <a href="#features">
+                  機能を見る
+                </a>
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section id="scenes" className="py-24 relative">
-        <div className="container px-4 mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="w-full lg:w-1/2">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-bl from-blue-200 to-pink-200 rounded-full blur-3xl opacity-30"></div>
-                <PhoneMockup>
-                  <div className="h-full bg-slate-50 flex flex-col">
-                    <div className="bg-white p-4 pt-12 shadow-sm z-10 border-b">
-                      <div className="font-bold text-center text-gray-800">利用シーン：ビジネス会議</div>
-                    </div>
-                    <div className="flex-1 p-4 overflow-hidden flex flex-col gap-4">
-                      <div className="bg-white p-4 rounded-2xl shadow-sm border border-pink-100">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Badge variant="outline" className="bg-pink-50 text-pink-600 border-pink-200">用語解説</Badge>
-                          <span className="text-xs text-gray-400">Now</span>
-                        </div>
-                        <p className="text-sm font-bold text-gray-800 mb-1">ROI（投資対効果）</p>
-                        <p className="text-xs text-gray-600">
-                          投資した費用に対して、どれだけの利益が得られたかを示す指標。<br/>
-                          (利益 ÷ 投資額) × 100 で算出されます。
-                        </p>
-                      </div>
-                      <div className="bg-white p-4 rounded-2xl shadow-sm border border-blue-100">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Badge variant="outline" className="bg-blue-50 text-blue-600 border-blue-200">人物情報</Badge>
-                          <span className="text-xs text-gray-400">1 min ago</span>
-                        </div>
-                        <p className="text-sm font-bold text-gray-800 mb-1">田中 健一 氏</p>
-                        <p className="text-xs text-gray-600">
-                          株式会社テックフロンティア 代表取締役。<br/>
-                          AI技術の実用化における第一人者として知られる。
-                        </p>
-                      </div>
-                    </div>
+      {/* Problem Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-12 text-slate-800">
+            こんな<span className="text-orange-500">「困った」</span>ありませんか？
+          </h2>
+          <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
+            {[
+              { title: "専門用語がわからない", desc: "会議中、知らない単語が出てきて話の内容が入ってこない...", icon: "🤔" },
+              { title: "知ったかぶりしてしまう", desc: "今さら聞けない雰囲気で、つい知っているフリをしてしまう...", icon: "😓" },
+              { title: "議事録に必死", desc: "メモを取るのに精一杯で、発言するタイミングを逃してしまう...", icon: "📝" },
+            ].map((item, i) => (
+              <Card key={i} className="border-none shadow-lg bg-slate-50 hover:bg-orange-50 transition-colors duration-300">
+                <CardContent className="pt-8 pb-8">
+                  <div className="text-5xl mb-4">{item.icon}</div>
+                  <h3 className="text-xl font-bold mb-3 text-slate-800">{item.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solution / Features Section */}
+      <section id="features" className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge variant="outline" className="mb-4 border-orange-500 text-orange-600 px-4 py-1">Solution</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+              <span className="text-orange-500">KUROKO PLUS</span> が解決します
+            </h2>
+            <p className="mt-4 text-slate-600">机の上にスマホを置くだけ。あとはAIにお任せください。</p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+            {[
+              { 
+                icon: <Mic className="h-8 w-8 text-orange-500" />, 
+                title: "リアルタイム文字起こし", 
+                desc: "会話を自動でテキスト化。聞き逃しを防ぎ、後から振り返ることも可能です。" 
+              },
+              { 
+                icon: <Volume2 className="h-8 w-8 text-orange-500" />, 
+                title: "ボーカル・フリーケンシー・フィルター", 
+                desc: "人の声の周波数だけをクリアに抽出。雑音の中でも大切な発言を逃しません。" 
+              },
+              { 
+                icon: <Settings className="h-8 w-8 text-orange-500" />, 
+                title: "オート・マイク・キャリブレーション", 
+                desc: "お使いの機種に合わせてマイク感度を自動最適化。面倒な設定は不要です。" 
+              },
+              { 
+                icon: <Shield className="h-8 w-8 text-orange-500" />, 
+                title: "知識レベル別解説", 
+                desc: "あなたのレベルに合わせて専門用語を解説。小学生から専門家レベルまで対応。" 
+              },
+            ].map((feature, i) => (
+              <Card key={i} className="border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-100">
+                    {feature.icon}
                   </div>
-                </PhoneMockup>
-              </div>
+                  <CardTitle className="text-lg font-bold text-slate-800">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 text-sm leading-relaxed">{feature.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mockup Section */}
+      <section className="py-20 bg-white overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
+            <div className="lg:w-1/2 text-center lg:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
+                実際の画面イメージ
+              </h2>
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                会話の流れを邪魔することなく、必要な情報だけをピンポイントで提供します。<br />
+                まるで、あなただけの優秀な「黒子」が隣にいるかのように。
+              </p>
+              <ul className="space-y-4 text-left inline-block">
+                <li className="flex items-center gap-3">
+                  <div className="h-6 w-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 flex-shrink-0"><Check className="h-4 w-4" /></div>
+                  <span className="text-slate-700">会話をリアルタイムで表示</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="h-6 w-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 flex-shrink-0"><Check className="h-4 w-4" /></div>
+                  <span className="text-slate-700">知らない単語を自動でピックアップ</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="h-6 w-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 flex-shrink-0"><Check className="h-4 w-4" /></div>
+                  <span className="text-slate-700">タップ一つで詳細解説</span>
+                </li>
+              </ul>
             </div>
             
-            <div className="w-full lg:w-1/2">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-8">
-                あらゆるシーンで、<br/>
-                <span className="text-pink-500">知識の格差</span>をなくす。
-              </h2>
-              
-              <div className="space-y-8">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                    <Users className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">ビジネス会議・商談</h3>
-                    <p className="text-muted-foreground">
-                      飛び交う専門用語や業界用語をリアルタイムで解説。
-                      新入社員でも、ベテランと同じレベルで議論に参加できます。
-                    </p>
+            {/* Phone Mockup */}
+            <div className="lg:w-1/2 flex justify-center relative">
+              <div className="relative w-[320px] h-[640px] bg-slate-900 rounded-[3rem] border-[8px] border-slate-900 shadow-2xl overflow-hidden">
+                {/* Status Bar */}
+                <div className="absolute top-0 w-full h-8 bg-slate-900 flex justify-between items-center px-6 z-20">
+                  <span className="text-white text-xs font-medium">9:41</span>
+                  <div className="flex gap-1">
+                    <div className="w-4 h-4 bg-white rounded-full opacity-20"></div>
+                    <div className="w-4 h-4 bg-white rounded-full opacity-20"></div>
                   </div>
                 </div>
+                
+                {/* App Content */}
+                <div className="w-full h-full bg-slate-50 pt-8 pb-4 flex flex-col font-sans text-sm">
+                  {/* App Header */}
+                  <div className="px-4 py-2 bg-slate-800 text-white flex items-center justify-between shadow-md z-10">
+                    <div className="flex items-center gap-1">
+                      <span className="font-bold text-yellow-400">KUROKO+</span>
+                      <span className="text-xs opacity-70">🎨 abc |||||</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-slate-600 text-white text-[10px] h-5 px-1">📚高校生</Badge>
+                      <Badge className="bg-yellow-400 text-slate-900 text-[10px] h-5 px-1">9474 pt 有料 M</Badge>
+                    </div>
+                  </div>
 
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                    <FileText className="w-6 h-6 text-green-600" />
+                  {/* Tabs */}
+                  <div className="flex justify-center gap-2 py-2 bg-slate-100 border-b border-slate-200">
+                    <button className="bg-slate-700 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">📝 プチ記憶</button>
+                    <button className="bg-slate-300 text-slate-600 px-3 py-1 rounded-full text-xs font-bold">📚 フル記憶</button>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">講義・セミナー</h3>
-                    <p className="text-muted-foreground">
-                      先生の話を聞きながら、分からない単語だけをこっそりチェック。
-                      授業の流れを止めずに、深い理解を得られます。
-                    </p>
-                  </div>
-                </div>
 
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
-                    <Play className="w-6 h-6 text-purple-600" />
+                  {/* Scrollable Content */}
+                  <div className="flex-1 overflow-y-auto p-3 space-y-3 bg-slate-50">
+                    
+                    {/* Conversation Block */}
+                    <div className="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                      <div className="flex items-center gap-2 mb-2 text-slate-400 text-xs font-bold uppercase tracking-wider">
+                        <MessageCircle className="h-3 w-3" /> 会話
+                      </div>
+                      <div className="space-y-3 pl-2 border-l-2 border-slate-200">
+                        <p className="text-slate-800 text-xs leading-relaxed">
+                          当時はですね、企業アカウントがSNSをやるっていう時代ではまだなかった
+                        </p>
+                        <p className="text-slate-800 text-xs leading-relaxed">
+                          一番最初はインスタグラムから始めております。私たちがインスタグラムを始めたのが2018年12月。
+                        </p>
+                        <p className="text-slate-800 text-xs leading-relaxed">
+                          作り直しているという感じですね。最初からこの体制でインスタ、ツイッターってこと？
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Topic Block */}
+                    <div className="bg-blue-50 rounded-xl p-3 shadow-sm border border-blue-100">
+                      <div className="flex items-center gap-2 mb-1 text-blue-600 text-xs font-bold">
+                        💼 SNSコンテンツ戦略の初期
+                      </div>
+                      <div className="bg-white rounded-lg p-2 text-xs font-bold text-slate-700 shadow-sm">
+                        SNSコンテンツ戦略
+                      </div>
+                    </div>
+
+                    {/* Dictionary Block */}
+                    <div className="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                      <div className="flex items-center gap-2 mb-2 text-slate-400 text-xs font-bold uppercase tracking-wider">
+                        🔍 調べた単語
+                      </div>
+                      
+                      {/* Word 1 */}
+                      <div className="mb-4 pb-3 border-b border-slate-100 last:border-0 last:pb-0 last:mb-0">
+                        <div className="flex justify-between items-baseline mb-1">
+                          <h4 className="font-bold text-sm text-slate-900">SNS <span className="text-xs font-normal text-slate-500 ml-1">サービス名</span></h4>
+                          <span className="text-[10px] text-slate-400">90%</span>
+                        </div>
+                        <p className="text-xs text-slate-600 leading-relaxed mb-2">
+                          インターネット上で人々が交流し、情報共有を行うためのプラットフォームの総称。インスタグラム、Twitterなどが含まれる。
+                        </p>
+                        <div className="bg-pink-50 text-pink-600 text-[10px] px-2 py-1 rounded inline-block mb-2">🔗 参考リンク</div>
+                        <div className="bg-yellow-50 p-2 rounded text-[10px] text-slate-600">
+                          <span className="block font-bold text-yellow-600 mb-0.5">💡 他の可能性:</span>
+                          特定のSNSプラットフォームの総称 (70%)<br/>
+                          文脈から、インスタグラムやTwitterなどの複数のSNSプラットフォームをまとめて指している可能性。
+                        </div>
+                      </div>
+
+                      {/* Word 2 */}
+                      <div>
+                        <div className="flex justify-between items-baseline mb-1">
+                          <h4 className="font-bold text-sm text-slate-900">クエンティバル <span className="text-xs font-normal text-slate-500 ml-1">専門用語</span></h4>
+                          <div className="flex gap-1">
+                            <span className="bg-orange-100 text-orange-600 text-[10px] px-1 rounded">候補</span>
+                            <span className="bg-red-100 text-red-600 text-[10px] px-1 rounded">要確認</span>
+                            <span className="text-[10px] text-slate-400">60%</span>
+                          </div>
+                        </div>
+                        <p className="text-xs text-slate-600 leading-relaxed mb-2">
+                          コンテンツが持つ価値、魅力、訴求力のこと。ユーザーにとって有益で、興味深く、共有したくなるような要素を指す。SNS運用において重要。
+                        </p>
+                      </div>
+                    </div>
+
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">動画視聴・学習</h3>
-                    <p className="text-muted-foreground">
-                      YouTubeや学習動画を見ながら起動しておけば、
-                      動画内の難解なキーワードを自動でピックアップして解説します。
-                    </p>
+
+                  {/* Bottom Action Bar */}
+                  <div className="px-4 py-3 bg-white border-t border-slate-200 flex justify-between items-center gap-2">
+                    <button className="flex-1 bg-slate-800 text-white py-2 rounded-full text-xs font-bold shadow-lg flex items-center justify-center gap-1">
+                      <Mic className="h-3 w-3" /> 開始
+                    </button>
+                    <button className="flex-1 bg-white border border-slate-200 text-slate-600 py-2 rounded-full text-xs font-bold shadow-sm">
+                      🗑️ リセット
+                    </button>
+                    <button className="flex-1 bg-green-600 text-white py-2 rounded-full text-xs font-bold shadow-lg flex items-center justify-center gap-1">
+                      📊 Excel
+                    </button>
                   </div>
                 </div>
               </div>
@@ -298,84 +292,103 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Future Vision Section */}
-      <section id="future" className="py-24 bg-slate-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
-        <div className="container px-4 mx-auto relative z-10 text-center">
-          <Badge variant="outline" className="mb-6 border-pink-500 text-pink-400 px-4 py-1">Future Vision</Badge>
-          <h2 className="text-3xl lg:text-5xl font-bold mb-8">
-            「検索」という行為そのものを、<br/>
-            過去のものに。
-          </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-12">
-            スマホを見る必要すらなくなる未来へ。<br/>
-            視界に情報が自然に溶け込む、新しい知体験を目指しています。
-          </p>
+      {/* Pricing Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">料金プラン</h2>
+            <p className="text-slate-600">必要な分だけ、ポイントチャージ。無駄なく使えます。</p>
+            <div className="mt-6 inline-block bg-white border border-orange-200 rounded-xl p-4 shadow-sm">
+              <p className="text-orange-600 font-bold text-lg">
+                💡 500pt（500円）で、約2時間の会議をフルサポート
+              </p>
+              <p className="text-xs text-slate-400 mt-1">※1分あたり約4pt消費（音声認識＋AI解説の平均的な利用頻度で算出）</p>
+            </div>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+            {[
+              { name: "お試し", price: "100", pt: "100", bonus: null, color: "bg-slate-100", btn: "secondary" },
+              { name: "スタンダード", price: "500", pt: "550", bonus: "+10%", color: "bg-white border-orange-200 shadow-md relative overflow-hidden", btn: "default", popular: true },
+              { name: "バリュー", price: "1,000", pt: "1,200", bonus: "+20%", color: "bg-slate-100", btn: "secondary" },
+              { name: "プロ", price: "3,000", pt: "4,000", bonus: "+33%", color: "bg-slate-100", btn: "secondary" },
+            ].map((plan, i) => (
+              <Card key={i} className={`border ${plan.popular ? 'border-orange-400 ring-2 ring-orange-100' : 'border-slate-200'} ${plan.color} flex flex-col`}>
+                {plan.popular && (
+                  <div className="bg-orange-500 text-white text-xs font-bold text-center py-1 absolute top-0 w-full left-0">
+                    一番人気
+                  </div>
+                )}
+                <CardHeader className={`${plan.popular ? 'pt-8' : ''} text-center pb-2`}>
+                  <h3 className="font-bold text-slate-600">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center gap-1 mt-2">
+                    <span className="text-3xl font-extrabold text-slate-900">¥{plan.price}</span>
+                  </div>
+                </CardHeader>
+                <CardContent className="text-center flex-1 flex flex-col justify-between">
+                  <div className="mb-6">
+                    <div className="text-2xl font-bold text-orange-600 mb-1">{plan.pt} pt</div>
+                    {plan.bonus && (
+                      <Badge variant="outline" className="bg-orange-50 text-orange-600 border-orange-200">
+                        {plan.bonus} お得！
+                      </Badge>
+                    )}
+                  </div>
+                  <ul className="text-sm text-slate-600 space-y-2 mb-6 text-left px-4">
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-green-500" /> Stripe決済対応</li>
+                    {i > 0 && <li className="flex items-center gap-2"><Check className="h-4 w-4 text-green-500" /> Excel出力機能付き</li>}
+                  </ul>
+                  <Button className={`w-full ${plan.popular ? 'bg-orange-500 hover:bg-orange-600' : ''}`} variant={plan.btn as "default" | "secondary" | "destructive" | "outline" | "ghost" | "link"}>
+                    選択する
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto text-left">
-            <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
-              <div className="w-10 h-10 rounded-full bg-pink-500/20 flex items-center justify-center mb-4">
-                <Radio className="w-5 h-5 text-pink-400" />
-              </div>
-              <h3 className="font-bold mb-2">インカム連携</h3>
-              <p className="text-sm text-gray-400">
-                耳元でささやくように情報を補足。
-                画面を見ずに、会話に集中したまま知識を得られます。
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
-              <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center mb-4">
-                <Globe className="w-5 h-5 text-blue-400" />
-              </div>
-              <h3 className="font-bold mb-2">多言語リアルタイム翻訳</h3>
-              <p className="text-sm text-gray-400">
-                言語の壁も、知識の壁も同時に突破。
-                海外のニュースや会議も、母国語で深く理解できます。
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
-              <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center mb-4">
-                <Brain className="w-5 h-5 text-purple-400" />
-              </div>
-              <h3 className="font-bold mb-2">思考の拡張</h3>
-              <p className="text-sm text-gray-400">
-                あなたの興味や専門分野を学習し、
-                「今、知りたいはずの情報」を先回りして提示します。
-              </p>
-            </div>
+          <div className="mt-12 text-center">
+             <p className="text-sm text-slate-500 mb-4">
+               有料会員特典：会話ログと単語帳の<span className="font-bold text-slate-700">Excel出力機能</span>が利用可能になります。
+             </p>
+             <div className="flex justify-center gap-4 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
+               {/* Payment Logos Placeholder */}
+               <div className="h-8 w-12 bg-slate-200 rounded flex items-center justify-center text-[10px] font-bold text-slate-500">VISA</div>
+               <div className="h-8 w-12 bg-slate-200 rounded flex items-center justify-center text-[10px] font-bold text-slate-500">Master</div>
+               <div className="h-8 w-12 bg-slate-200 rounded flex items-center justify-center text-[10px] font-bold text-slate-500">JCB</div>
+               <div className="h-8 w-12 bg-slate-200 rounded flex items-center justify-center text-[10px] font-bold text-slate-500">Amex</div>
+             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="container px-4 mx-auto text-center relative z-10">
-          <h2 className="text-4xl lg:text-6xl font-bold mb-8 tracking-tight">
-            さあ、<span className="text-pink-500">全知全能</span>の<br/>
-            会話体験へ。
-          </h2>
-          <p className="text-xl text-muted-foreground mb-12">
-            もう、言葉に詰まることはありません。<br/>
-            KUROKO PLUSが、あなたの会話を影から支えます。
-          </p>
-          <Button size="lg" className="bg-gradient-to-r from-pink-500 to-yellow-500 hover:from-pink-600 hover:to-yellow-600 text-white rounded-full px-12 h-16 text-xl shadow-2xl shadow-pink-500/30 transform hover:scale-105 transition-all duration-300">
-            無料でダウンロード
-            <ArrowRight className="ml-2 w-6 h-6" />
-          </Button>
-          <p className="mt-6 text-sm text-muted-foreground">
-            ※現在はベータ版として無料公開中です
-          </p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-50 py-12 border-t">
-        <div className="container px-4 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2">
-            <span className="font-bold text-xl text-gray-800">KUROKO PLUS</span>
+      <footer className="bg-slate-900 text-slate-300 py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <img src="/logo.png" alt="KUROKO PLUS Logo" className="h-8 w-8 object-contain brightness-0 invert" />
+                <span className="text-xl font-bold text-white">KUROKO PLUS</span>
+              </div>
+              <p className="text-sm leading-relaxed max-w-md mb-6">
+                会話の空気を壊さず、こっそり賢くサポート。<br />
+                あなたのビジネスとコミュニケーションを加速させるAIアシスタント。
+              </p>
+              <Button className="bg-[#06C755] hover:bg-[#05b34c] text-white font-bold border-none" asChild>
+                <a href="https://lin.ee/hcW3NZy" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2 h-5 w-5" /> LINEでお問い合わせ
+                </a>
+              </Button>
+            </div>
+            <div className="md:text-right space-y-2 text-sm">
+              <p><span className="font-bold text-white">販売:</span> 株式会社バンテックス</p>
+              <p><span className="font-bold text-white">企画開発:</span> 株式会社ビークリエイティブ</p>
+              <p><span className="font-bold text-white">住所:</span> 愛知県名古屋市天白区原3丁目304番1号</p>
+              <p><span className="font-bold text-white">Email:</span> kuroko@becreative.co.jp</p>
+            </div>
           </div>
-          <div className="text-sm text-gray-500">
-            © 2024 KUROKO PLUS. All rights reserved.
+          <div className="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+            <p>&copy; 2026 KUROKO PLUS All Rights Reserved.</p>
           </div>
         </div>
       </footer>

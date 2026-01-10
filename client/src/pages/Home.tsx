@@ -309,7 +309,7 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
             {[
               { name: "お試し", price: "100", pt: "100", bonus: null, color: "bg-slate-100", btn: "secondary" },
-              { name: "スタンダード", price: "500", pt: "550", bonus: "+10%", color: "bg-white border-orange-200 shadow-md relative overflow-hidden", btn: "default", popular: true },
+              { name: "標準", price: "500", pt: "550", bonus: "+10%", color: "bg-white border-orange-200 shadow-md relative overflow-hidden", btn: "default", popular: true },
               { name: "バリュー", price: "1,000", pt: "1,200", bonus: "+20%", color: "bg-slate-100", btn: "secondary" },
               { name: "プロ", price: "3,000", pt: "4,000", bonus: "+33%", color: "bg-slate-100", btn: "secondary" },
             ].map((plan, i) => (
@@ -336,7 +336,7 @@ export default function Home() {
                   </div>
                   <ul className="text-sm text-slate-600 space-y-2 mb-6 text-left px-4">
                     <li className="flex items-center gap-2"><Check className="h-4 w-4 text-green-500" /> Stripe決済対応</li>
-                    {i > 0 && <li className="flex items-center gap-2"><Check className="h-4 w-4 text-green-500" /> Excel出力機能付き</li>}
+                    <li className="flex items-center gap-2"><Check className="h-4 w-4 text-green-500" /> Excel出力機能付き</li>
                   </ul>
                   <Button className={`w-full ${plan.popular ? 'bg-orange-500 hover:bg-orange-600' : ''}`} variant={plan.btn as "default" | "secondary" | "destructive" | "outline" | "ghost" | "link"}>
                     選択する
@@ -348,7 +348,7 @@ export default function Home() {
           
           <div className="mt-12 text-center">
              <p className="text-sm text-slate-500 mb-4">
-               有料会員特典：会話ログと単語帳の<span className="font-bold text-slate-700">Excel出力機能</span>が利用可能になります。
+               <span className="font-bold text-orange-600">100円以上の購入で有料会員に！</span>会話ログと単語帳の<span className="font-bold text-slate-700">Excel出力機能</span>が利用可能になります。
              </p>
              <div className="flex justify-center gap-4 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
                {/* Payment Logos Placeholder */}

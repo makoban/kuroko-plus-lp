@@ -334,13 +334,10 @@ export default function Home() {
                       </Badge>
                     )}
                   </div>
-                  <ul className="text-sm text-slate-600 space-y-2 mb-6 text-left px-4">
+                  <ul className="text-sm text-slate-600 space-y-2 text-left px-4">
                     <li className="flex items-center gap-2"><Check className="h-4 w-4 text-green-500" /> Stripe決済対応</li>
                     <li className="flex items-center gap-2"><Check className="h-4 w-4 text-green-500" /> Excel出力機能付き</li>
                   </ul>
-                  <Button className={`w-full ${plan.popular ? 'bg-orange-500 hover:bg-orange-600' : ''}`} variant={plan.btn as "default" | "secondary" | "destructive" | "outline" | "ghost" | "link"}>
-                    選択する
-                  </Button>
                 </CardContent>
               </Card>
             ))}

@@ -43,12 +43,12 @@ export default function Home() {
               New Release
             </Badge>
             <h1 className="mb-6 text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight md:text-6xl lg:text-7xl whitespace-pre-line">
-              スマホが会話をキャッチ。<br />
-              調べてそっと教えてくれる。
+              スマホが空気を読み、<br />
+              知識を届ける。
             </h1>
             <p className="mb-8 text-lg font-medium text-slate-200 md:text-xl lg:text-2xl">
-              操作不要なのに会話に困らない！<br />
-              あなたの専属「黒子」が、<br className="md:hidden" />リアルタイムでサポートします。
+              会話を聞いてそっと教える。<br />
+              これからの時代は操作ゼロ検索。
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start">
               <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg shadow-orange-500/20 w-full sm:w-auto" asChild>

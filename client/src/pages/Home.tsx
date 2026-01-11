@@ -43,7 +43,7 @@ export default function Home() {
               New Release
             </Badge>
             <h1 className="mb-6 text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight md:text-6xl lg:text-7xl whitespace-pre-line">
-              スマホが空気を読み、<br />
+              スマホが空気を読み<br />
               知識を届ける。
             </h1>
             <p className="mb-8 text-lg font-medium text-slate-200 md:text-xl lg:text-2xl">

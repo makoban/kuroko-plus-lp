@@ -9,7 +9,7 @@ export default function Privacy() {
       <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="KUROKO PLUS Logo" className="h-10 w-10 object-contain" />
+            <img src="/logo.png" alt="KUROKO PLUS Logo" className="h-10 w-10 object-cover rounded-lg" />
             <span className="text-xl font-bold tracking-tight text-slate-900">KUROKO PLUS</span>
           </div>
           <Button variant="outline" size="sm" asChild>

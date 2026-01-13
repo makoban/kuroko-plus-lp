@@ -11,7 +11,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="KUROKO PLUS Logo" className="h-10 w-10 object-contain" />
+            <img src="/logo.png" alt="KUROKO PLUS Logo" className="h-10 w-10 object-cover rounded-lg" />
             <span className="text-xl font-bold tracking-tight text-slate-900">KUROKO PLUS</span>
           </div>
           <Button variant="default" size="sm" className="bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full" asChild>
@@ -365,7 +365,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src="/logo.png" alt="KUROKO PLUS Logo" className="h-8 w-8 object-contain brightness-0 invert" />
+                <img src="/logo.png" alt="KUROKO PLUS Logo" className="h-8 w-8 object-cover rounded-lg" />
                 <span className="text-xl font-bold text-white">KUROKO PLUS</span>
               </div>
               <p className="text-sm leading-relaxed max-w-md mb-6">

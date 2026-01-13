@@ -27,7 +27,7 @@ export default function Privacy() {
         <div className="prose prose-slate max-w-none">
           <p className="text-sm text-slate-500 mb-8 text-center">最終更新日: 2026年1月13日</p>
           
-          <p>株式会社ビークリエイティブ（以下「当社」といいます。）は、当社が提供する会話支援AIアプリケーション「ステルスAI」（以下「本サービス」といいます。）における、ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。</p>
+          <p>株式会社バンテックス（販売）および株式会社ビークリエイティブ（開発）（以下、両社を総称して「当社」といいます。）は、当社が提供する会話支援AIアプリケーション「ステルスAI」（以下「本サービス」といいます。）における、ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。</p>
 
           <h2 className="text-xl font-bold mt-8 mb-4 border-b pb-2">第1条（収集する個人情報）</h2>
           <p>当社は、本サービスの提供にあたり、以下の情報を収集します。</p>
@@ -93,7 +93,8 @@ export default function Privacy() {
           <h2 className="text-xl font-bold mt-8 mb-4 border-b pb-2">第7条（お問い合わせ窓口）</h2>
           <p>ご意見、ご質問、苦情のお申し出その他個人情報の取扱いに関するお問い合わせは、下記の窓口までお願いいたします。</p>
           <div className="bg-slate-100 rounded-lg p-6 mt-4">
-            <p><strong>事業者名:</strong> 株式会社ビークリエイティブ</p>
+            <p><strong>販売:</strong> 株式会社バンテックス</p>
+            <p><strong>開発:</strong> 株式会社ビークリエイティブ</p>
             <p><strong>住所:</strong> 愛知県名古屋市天白区原3丁目304番1号</p>
             <p><strong>Eメール:</strong> kuroko@becreative.co.jp</p>
           </div>

@@ -112,7 +112,7 @@ export default function Tokushoho() {
             </table>
           </div>
 
-          <h2 className="text-xl font-bold mt-8 mb-4 border-b pb-2">企画・開発</h2>
+          <h2 className="text-xl font-bold mt-8 mb-4 border-b pb-2">開発</h2>
           <div className="bg-slate-100 rounded-lg p-6">
             <p><strong>事業者名:</strong> 株式会社ビークリエイティブ</p>
             <p><strong>住所:</strong> 愛知県名古屋市天白区原3丁目304番1号</p>

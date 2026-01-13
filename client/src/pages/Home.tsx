@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Mic, Volume2, Settings, Shield, Smartphone, ExternalLink, MessageCircle } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Home() {
   return (
@@ -384,8 +385,19 @@ export default function Home() {
               <p><span className="font-bold text-white">Email:</span> kuroko@becreative.co.jp</p>
             </div>
           </div>
-          <div className="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
-            <p>&copy; 2026 KUROKO PLUS All Rights Reserved.</p>
+          <div className="border-t border-slate-800 pt-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-4 text-sm">
+              <Link href="/terms" className="text-slate-400 hover:text-white transition-colors">
+                利用規約
+              </Link>
+              <Link href="/privacy" className="text-slate-400 hover:text-white transition-colors">
+                プライバシーポリシー
+              </Link>
+              <Link href="/tokushoho" className="text-slate-400 hover:text-white transition-colors">
+                特定商取引法に基づく表示
+              </Link>
+            </div>
+            <p className="text-center text-xs text-slate-500">&copy; 2026 KUROKO PLUS All Rights Reserved.</p>
           </div>
         </div>
       </footer>

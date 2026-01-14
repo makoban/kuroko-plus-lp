@@ -25,15 +25,21 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 z-0">
+          {/* 背景動画（モバイル） */}
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            className="h-full w-full object-cover opacity-50 md:hidden"
+          >
+            <source src="/videos/hero_video.mp4" type="video/mp4" />
+          </video>
+          {/* 背景画像（PC） */}
           <img 
             src="/images/hero_table_smartphone.png" 
             alt="Meeting room table with smartphone" 
             className="h-full w-full object-cover opacity-40 hidden md:block"
-          />
-          <img 
-            src="/images/hero_table_smartphone_mobile.png" 
-            alt="Meeting room table with smartphone" 
-            className="h-full w-full object-cover opacity-40 md:hidden"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
         </div>

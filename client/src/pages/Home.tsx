@@ -23,52 +23,59 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-slate-900 text-white">
-        <div className="absolute inset-0 z-0">
-          {/* 背景動画（モバイル） */}
-          <video 
-            autoPlay 
-            muted 
-            loop 
-            playsInline
-            className="h-full w-full object-cover opacity-50 md:hidden"
-          >
-            <source src="/videos/hero_video.mp4" type="video/mp4" />
-          </video>
-          {/* 背景画像（PC） */}
-          <img 
-            src="/images/hero_table_smartphone.png" 
-            alt="Meeting room table with smartphone" 
-            className="h-full w-full object-cover opacity-40 hidden md:block"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
-        </div>
-
-        <div className="container relative z-10 mx-auto px-4 py-20 md:py-32 text-center md:text-left">
-          <div className="max-w-2xl">
-            <Badge className="mb-4 bg-orange-500 hover:bg-orange-600 text-white border-none px-3 py-1 text-sm">
-              New Release
-            </Badge>
-            <h1 className="mb-6 text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight md:text-6xl lg:text-7xl whitespace-pre-line">
-              スマホが空気を読み<br />
-              知識を届ける。
-            </h1>
-            <p className="mb-8 text-lg font-medium text-slate-200 md:text-xl lg:text-2xl">
-              会話を聞いてそっと教える。<br />
-              これからの時代は操作ゼロ検索。
-            </p>
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start">
-              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg shadow-orange-500/20 w-full sm:w-auto" asChild>
-                <a href="https://kuroko-plus.becreative.co.jp/" target="_blank" rel="noopener noreferrer">
-                  無料で試してみる
-                  <ExternalLink className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/20 font-bold text-lg px-8 py-6 rounded-full backdrop-blur-sm w-full sm:w-auto" asChild>
-                <a href="#features">
-                  機能を見る
-                </a>
-              </Button>
+      <section className="relative overflow-hidden bg-slate-900 text-white min-h-[600px] md:min-h-[700px]">
+        {/* 背景グラデーション */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+        
+        <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* 左側: テキスト */}
+            <div className="flex-1 text-center md:text-left">
+              <Badge className="mb-4 bg-orange-500 hover:bg-orange-600 text-white border-none px-3 py-1 text-sm">
+                New Release
+              </Badge>
+              <h1 className="mb-6 text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl whitespace-pre-line">
+                スマホが空気を読み<br />
+                知識を届ける。
+              </h1>
+              <p className="mb-8 text-lg font-medium text-slate-200 md:text-xl lg:text-2xl">
+                会話を聞いてそっと教える。<br />
+                これからの時代は操作ゼロ検索。
+              </p>
+              <div className="flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg shadow-orange-500/20 w-full sm:w-auto" asChild>
+                  <a href="https://kuroko-plus.becreative.co.jp/" target="_blank" rel="noopener noreferrer">
+                    無料で試してみる
+                    <ExternalLink className="ml-2 h-5 w-5" />
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/20 font-bold text-lg px-8 py-6 rounded-full backdrop-blur-sm w-full sm:w-auto" asChild>
+                  <a href="#features">
+                    機能を見る
+                  </a>
+                </Button>
+              </div>
+            </div>
+            
+            {/* 右側: 動画 */}
+            <div className="flex-1 flex justify-center md:justify-end">
+              <div className="relative w-[280px] md:w-[320px] lg:w-[360px]">
+                {/* スマホフレーム風の装飾 */}
+                <div className="absolute -inset-4 bg-gradient-to-br from-orange-500/20 to-purple-500/20 rounded-[3rem] blur-xl"></div>
+                <div className="relative bg-slate-800 rounded-[2.5rem] p-2 shadow-2xl border border-slate-700">
+                  {/* ノッチ風の装飾 */}
+                  <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-6 bg-slate-900 rounded-full"></div>
+                  <video 
+                    autoPlay 
+                    muted 
+                    loop 
+                    playsInline
+                    className="w-full aspect-[9/16] object-cover rounded-[2rem]"
+                  >
+                    <source src="/videos/hero_video.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
             </div>
           </div>
         </div>

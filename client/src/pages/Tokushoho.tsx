@@ -34,10 +34,7 @@ export default function Tokushoho() {
                   <th className="bg-slate-100 p-4 text-left font-bold w-1/3">販売業者</th>
                   <td className="p-4">株式会社バンテックス</td>
                 </tr>
-                <tr className="border-b">
-                  <th className="bg-slate-100 p-4 text-left font-bold">運営責任者</th>
-                  <td className="p-4">代表取締役 磯貝 誠</td>
-                </tr>
+
                 <tr className="border-b">
                   <th className="bg-slate-100 p-4 text-left font-bold">所在地</th>
                   <td className="p-4">愛知県名古屋市天白区原3丁目304番1号</td>
@@ -114,7 +111,7 @@ export default function Tokushoho() {
 
           <h2 className="text-xl font-bold mt-8 mb-4 border-b pb-2">開発</h2>
           <div className="bg-slate-100 rounded-lg p-6">
-            <p><strong>事業者名:</strong> 株式会社ビークリエイティブ</p>
+            <p><strong>事業者名:</strong> 株式会社バンテックス</p>
             <p><strong>住所:</strong> 愛知県名古屋市天白区原3丁目304番1号</p>
             <p><strong>Eメール:</strong> kuroko@becreative.co.jp</p>
           </div>

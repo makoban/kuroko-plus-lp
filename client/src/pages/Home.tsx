@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Mic, Volume2, Settings, Shield, Smartphone, ExternalLink, MessageCircle } from "lucide-react";
+import { Check, Mic, Volume2, Settings, Shield, Smartphone, ExternalLink, MessageCircle, Zap } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -103,38 +103,48 @@ export default function Home() {
             <p className="mt-4 text-slate-600">机の上にスマホを置くだけ。あとはAIにお任せください。</p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5 max-w-7xl mx-auto">
             {[
+              { 
+                icon: <Zap className="h-8 w-8 text-white" />, 
+                title: "即レクチャー機能", 
+                desc: "AIに教えたい知識をその場で伝えられます。「今こんな会話をしています」「この会議に誰が出ています」など、リアルタイムに情報を教えながら使えます。",
+                highlight: true
+              },
               { 
                 icon: <Mic className="h-8 w-8 text-orange-500" />, 
                 title: "リアルタイム文字起こし", 
-                desc: "会話を自動でテキスト化。聞き逃しを防ぎ、後から振り返ることも可能です。" 
+                desc: "会話を自動でテキスト化。聞き逃しを防ぎ、後から振り返ることも可能です。",
+                highlight: false
               },
               { 
                 icon: <Volume2 className="h-8 w-8 text-orange-500" />, 
                 title: "ボーカル・フリーケンシー・フィルター", 
-                desc: "人の声の周波数だけをクリアに抽出。雑音の中でも大切な発言を逃しません。" 
+                desc: "人の声の周波数だけをクリアに抽出。雑音の中でも大切な発言を逃しません。",
+                highlight: false
               },
               { 
                 icon: <Settings className="h-8 w-8 text-orange-500" />, 
                 title: "オート・マイク・キャリブレーション", 
-                desc: "お使いの機種に合わせてマイク感度を自動最適化。面倒な設定は不要です。" 
+                desc: "お使いの機種に合わせてマイク感度を自動最適化。面倒な設定は不要です。",
+                highlight: false
               },
               { 
                 icon: <Shield className="h-8 w-8 text-orange-500" />, 
                 title: "知識レベル別解説", 
-                desc: "あなたのレベルに合わせて専門用語を解説。小学生から専門家レベルまで対応。" 
+                desc: "あなたのレベルに合わせて専門用語を解説。小学生から専門家レベルまで対応。",
+                highlight: false
               },
             ].map((feature, i) => (
-              <Card key={i} className="border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <Card key={i} className={`border shadow-sm hover:shadow-md transition-shadow ${feature.highlight ? 'border-orange-500 bg-gradient-to-br from-orange-500 to-orange-600 text-white' : 'border-slate-200'}`}>
                 <CardHeader>
-                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-100">
+                  <div className={`mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl ${feature.highlight ? 'bg-white/20' : 'bg-orange-100'}`}>
                     {feature.icon}
                   </div>
-                  <CardTitle className="text-lg font-bold text-slate-800">{feature.title}</CardTitle>
+                  <CardTitle className={`text-lg font-bold ${feature.highlight ? 'text-white' : 'text-slate-800'}`}>{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-600 text-sm leading-relaxed">{feature.desc}</p>
+                  <p className={`text-sm leading-relaxed ${feature.highlight ? 'text-orange-100' : 'text-slate-600'}`}>{feature.desc}</p>
                 </CardContent>
               </Card>
             ))}

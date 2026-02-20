@@ -26,7 +26,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-slate-900 text-white min-h-[600px] md:min-h-[700px]">
         {/* 背景グラデーション */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-        
+
         <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             {/* 左側: テキスト */}
@@ -56,7 +56,7 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            
+
             {/* 右側: 動画 */}
             <div className="flex-1 flex justify-center md:justify-end">
               <div className="relative w-[280px] md:w-[320px] lg:w-[360px]">
@@ -65,10 +65,10 @@ export default function Home() {
                 <div className="relative bg-slate-800 rounded-[2.5rem] p-2 shadow-2xl border border-slate-700">
                   {/* ノッチ風の装飾 */}
                   <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-6 bg-slate-900 rounded-full"></div>
-                  <video 
-                    autoPlay 
-                    muted 
-                    loop 
+                  <video
+                    autoPlay
+                    muted
+                    loop
                     playsInline
                     className="w-full aspect-[9/16] object-cover rounded-[2rem]"
                   >
@@ -118,33 +118,33 @@ export default function Home() {
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5 max-w-7xl mx-auto">
             {[
-              { 
-                icon: <Zap className="h-8 w-8 text-white" />, 
-                title: "即レクチャー機能", 
+              {
+                icon: <Zap className="h-8 w-8 text-white" />,
+                title: "即レクチャー機能",
                 desc: "AIに教えたい知識をその場で伝えられます。「今こんな会話をしています」「この会議に誰が出ています」など、リアルタイムに情報を教えながら使えます。",
                 highlight: true
               },
-              { 
-                icon: <Mic className="h-8 w-8 text-orange-500" />, 
-                title: "リアルタイム文字起こし", 
+              {
+                icon: <Mic className="h-8 w-8 text-orange-500" />,
+                title: "リアルタイム文字起こし",
                 desc: "会話を自動でテキスト化。聞き逃しを防ぎ、後から振り返ることも可能です。",
                 highlight: false
               },
-              { 
-                icon: <Volume2 className="h-8 w-8 text-orange-500" />, 
-                title: "ボーカル・フリーケンシー・フィルター", 
+              {
+                icon: <Volume2 className="h-8 w-8 text-orange-500" />,
+                title: "ボーカル・フリーケンシー・フィルター",
                 desc: "人の声の周波数だけをクリアに抽出。雑音の中でも大切な発言を逃しません。",
                 highlight: false
               },
-              { 
-                icon: <Settings className="h-8 w-8 text-orange-500" />, 
-                title: "オート・マイク・キャリブレーション", 
+              {
+                icon: <Settings className="h-8 w-8 text-orange-500" />,
+                title: "オート・マイク・キャリブレーション",
                 desc: "お使いの機種に合わせてマイク感度を自動最適化。面倒な設定は不要です。",
                 highlight: false
               },
-              { 
-                icon: <Shield className="h-8 w-8 text-orange-500" />, 
-                title: "知識レベル別解説", 
+              {
+                icon: <Shield className="h-8 w-8 text-orange-500" />,
+                title: "知識レベル別解説",
                 desc: "あなたのレベルに合わせて専門用語を解説。小学生から専門家レベルまで対応。",
                 highlight: false
               },
@@ -192,7 +192,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            
+
             {/* Phone Mockup */}
             <div className="lg:w-1/2 flex justify-center relative">
               <div className="relative w-[320px] h-[640px] bg-slate-900 rounded-[3rem] border-[8px] border-slate-900 shadow-2xl overflow-hidden">
@@ -204,7 +204,7 @@ export default function Home() {
                     <div className="w-4 h-4 bg-white rounded-full opacity-20"></div>
                   </div>
                 </div>
-                
+
                 {/* App Content */}
                 <div className="w-full h-full bg-slate-50 pt-8 pb-4 flex flex-col font-sans text-sm">
                   {/* App Header */}
@@ -227,7 +227,7 @@ export default function Home() {
 
                   {/* Scrollable Content */}
                   <div className="flex-1 overflow-y-auto p-3 space-y-3 bg-slate-50">
-                    
+
                     {/* Conversation Block */}
                     <div className="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
                       <div className="flex items-center gap-2 mb-2 text-slate-400 text-xs font-bold uppercase tracking-wider">
@@ -261,7 +261,7 @@ export default function Home() {
                       <div className="flex items-center gap-2 mb-2 text-slate-400 text-xs font-bold uppercase tracking-wider">
                         🔍 調べた単語
                       </div>
-                      
+
                       {/* Word 1 */}
                       <div className="mb-4 pb-3 border-b border-slate-100 last:border-0 last:pb-0 last:mb-0">
                         <div className="flex justify-between items-baseline mb-1">
@@ -366,7 +366,7 @@ export default function Home() {
               </Card>
             ))}
           </div>
-          
+
           <div className="mt-12 text-center">
              <p className="text-sm text-slate-500 mb-4">
                <span className="font-bold text-orange-600">100円以上の購入で有料会員に！</span>会話ログと単語帳の<span className="font-bold text-slate-700">Excel出力機能</span>が利用可能になります。
@@ -405,7 +405,7 @@ export default function Home() {
               <p><span className="font-bold text-white">販売:</span> 株式会社バンテックス</p>
               <p><span className="font-bold text-white">企画開発:</span> 株式会社ビークリエイティブ</p>
               <p><span className="font-bold text-white">住所:</span> 愛知県名古屋市天白区原3丁目304番1号</p>
-              <p><span className="font-bold text-white">Email:</span> kuroko@becreative.co.jp</p>
+              <p><span className="font-bold text-white">Email:</span> info@bantex.jp</p>
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8">

@@ -50,8 +50,8 @@ export default function Tokushoho() {
                 <tr className="border-b">
                   <th className="bg-slate-100 p-4 text-left font-bold">URL</th>
                   <td className="p-4">
-                    <a href="https://kuroko.becreative.co.jp/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                      https://kuroko.becreative.co.jp/
+                    <a href="https://kuroko.bantex.jp/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                      https://kuroko.bantex.jp/
                     </a>
                   </td>
                 </tr>

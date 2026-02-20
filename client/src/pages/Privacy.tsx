@@ -23,15 +23,15 @@ export default function Privacy() {
       {/* Content */}
       <main className="container mx-auto px-4 py-12 max-w-4xl">
         <h1 className="text-3xl font-bold mb-8 text-center">プライバシーポリシー</h1>
-        
+
         <div className="prose prose-slate max-w-none">
           <p className="text-sm text-slate-500 mb-8 text-center">最終更新日: 2026年1月13日</p>
-          
+
           <p>株式会社バンテックス（販売）および株式会社ビークリエイティブ（開発）（以下、両社を総称して「当社」といいます。）は、当社が提供する会話支援AIアプリケーション「ステルスAI」（以下「本サービス」といいます。）における、ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。</p>
 
           <h2 className="text-xl font-bold mt-8 mb-4 border-b pb-2">第1条（収集する個人情報）</h2>
           <p>当社は、本サービスの提供にあたり、以下の情報を収集します。</p>
-          
+
           <h3 className="text-lg font-bold mt-6 mb-3">1. ユーザーからご提供いただく情報</h3>
           <ul className="list-disc pl-6 space-y-2">
             <li>氏名、メールアドレス、パスワード等、ユーザー登録のためにご入力いただく情報</li>
@@ -96,7 +96,7 @@ export default function Privacy() {
             <p><strong>販売:</strong> 株式会社バンテックス</p>
             <p><strong>開発:</strong> 株式会社ビークリエイティブ</p>
             <p><strong>住所:</strong> 愛知県名古屋市天白区原3丁目304番1号</p>
-            <p><strong>Eメール:</strong> kuroko@becreative.co.jp</p>
+            <p><strong>Eメール:</strong> info@bantex.jp</p>
           </div>
 
           <p className="mt-8 text-center text-slate-500">以上</p>

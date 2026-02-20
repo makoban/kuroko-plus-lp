@@ -23,10 +23,10 @@ export default function Tokushoho() {
       {/* Content */}
       <main className="container mx-auto px-4 py-12 max-w-4xl">
         <h1 className="text-3xl font-bold mb-8 text-center">特定商取引法に基づく表示</h1>
-        
+
         <div className="prose prose-slate max-w-none">
           <p className="text-sm text-slate-500 mb-8 text-center">最終更新日: 2026年1月13日</p>
-          
+
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <tbody>
@@ -45,7 +45,7 @@ export default function Tokushoho() {
                 </tr>
                 <tr className="border-b">
                   <th className="bg-slate-100 p-4 text-left font-bold">メールアドレス</th>
-                  <td className="p-4">kuroko@becreative.co.jp</td>
+                  <td className="p-4">info@bantex.jp</td>
                 </tr>
                 <tr className="border-b">
                   <th className="bg-slate-100 p-4 text-left font-bold">URL</th>
@@ -113,7 +113,7 @@ export default function Tokushoho() {
           <div className="bg-slate-100 rounded-lg p-6">
             <p><strong>事業者名:</strong> 株式会社バンテックス</p>
             <p><strong>住所:</strong> 愛知県名古屋市天白区原3丁目304番1号</p>
-            <p><strong>Eメール:</strong> kuroko@becreative.co.jp</p>
+            <p><strong>Eメール:</strong> info@bantex.jp</p>
           </div>
 
           <p className="mt-8 text-center text-slate-500">以上</p>

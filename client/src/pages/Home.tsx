@@ -15,7 +15,7 @@ export default function Home() {
             <span className="text-xl font-bold tracking-tight text-slate-900">KUROKO PLUS</span>
           </div>
           <Button variant="default" size="sm" className="bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full" asChild>
-            <a href="https://kuroko.bantex.jp/" target="_blank" rel="noopener noreferrer">
+            <a href="https://kuroko-plus.becreative.co.jp/" target="_blank" rel="noopener noreferrer">
               無料で試す
             </a>
           </Button>
@@ -44,7 +44,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start">
                 <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg shadow-orange-500/20 w-full sm:w-auto" asChild>
-                  <a href="https://kuroko.bantex.jp/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://kuroko-plus.becreative.co.jp/" target="_blank" rel="noopener noreferrer">
                     無料で試してみる
                     <ExternalLink className="ml-2 h-5 w-5" />
                   </a>
